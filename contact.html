@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Malik's Store</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your stylesheet -->
+</head>
+<body>
+
+    <header>
+        <h1>Contact</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us!</p>
+
+            <!-- Contact Form -->
+            <form action="/submit" method="post" autocomplete="on">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Other Ways to Reach Us</h2>
+            <p>Email: <a href="mailto:contact@malikshop.com">contact@malikshop.com</a></p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Malik's Shop Street, City, Country</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Malik's Shop. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

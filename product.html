@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Malik's store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+       <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html">About</a></li>
+           </ul>
+       </nav>
+    </header>
+
+    <!-- Product Details Section -->
+    <div id="product-details" class="product-details">
+        <!-- Product details will be dynamically inserted here -->
+    </div>
+
+    <script>
+        // Product Data (could be fetched from an API or a database)
+        const products = {
+            1: { name: 'Product 1', price: '--', description: 'This is a detailed description of Product 1.', image: 'images/product1.jpg' },
+            2: { name: 'Product 2', price: '--', description: 'This is a detailed description of Product 2.', image: 'images/product2.jpg' },
+            3: { name: 'Product 3', price: '--', description: 'This is a detailed description of Product 3.', image: 'images/product3.jpg' }
+        };
+
+        // Get the product ID from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Find the product based on the ID
+        const product = products[productId];
+
+        // Display the product details
+        if (product) {
+            document.getElementById('product-details').innerHTML = `
+                <h1>${product.name}</h1>
+                <img src="${product.image}" alt="${product.name}">
+                <p>Price: ${product.price}</p>
+                <p>${product.description}</p>
+                <button>Add to Cart</button>
+            `;
+        } else {
+            document.getElementById('product-details').innerHTML = '<p>Product not found.</p>';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,604 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000002;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Navigation bar styling */
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    background-color: #007bff;
+}
+
+/* Main content styling */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styling inside the main content */
+section {
+    margin-bottom: 20px;
+}
+
+/* Header inside sections */
+section h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Paragraph inside sections */
+section p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Styling for list items */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive styles - Make navigation stack vertically on small screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
+
+/* Responsive styles for very small screens */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+
+    section p {
+        font-size: 0.9em;
+    }
+}
+
+/* Styling for images to make them responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Product List Styling */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(25% - 20px); /* Adjust the width of the product cards */
+    margin-bottom: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+button.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+button.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+button.add-to-cart:active {
+    background-color: #3e8e41;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px); /* Two products per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%; /* One product per row on very small screens */
+    }
+}
+
+/* General Cart Styling */
+.cart {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    margin-left: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.cart h2 {
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.cart li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart li:last-child {
+    border-bottom: none;
+}
+
+.cart li span {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.cart p {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-top: 15px;
+}
+
+button#checkout {
+    width: 100%;
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button#checkout:hover {
+    background-color: #e65c00;
+}
+
+button#checkout:active {
+    background-color: #cc5200;
+}
+
+/* Cart Item Hover Effect */
+.cart li:hover {
+    background-color: #f9f9f9;
+    transform: translateX(5px); /* Subtle animation */
+    transition: all 0.3s ease;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .cart {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .cart h2 {
+        font-size: 1.5em;
+    }
+
+    .cart li span {
+        font-size: 1em;
+    }
+
+    button#checkout {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}
+
+/* General Styles for the Product Page */
+.product-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Product Image */
+.product-image {
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Product Info */
+.product-info {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product-info h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 1.5em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+button.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+button.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+button.add-to-cart:active {
+    background-color: #3e8e41;
+}
+
+/* Product Reviews Section */
+.product-reviews {
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+.product-reviews h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.review p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Other Products Section */
+.other-products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.other-products .product {
+    width: 30%;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.other-products .product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.other-products .product h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.other-products .product p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .other-products .product {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .other-products .product {
+        width: 100%;
+    }
+}
+
+/* Style for Product List */
+.product-list {
+    display: flex;
+    gap: 20px;
+}
+
+.product {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product h3 {
+    font-size: 18px;
+}
+
+.product p {
+    font-size: 16px;
+}
+
+/* Style for Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Basic Layout and Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.product-details {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.product-details img {
+    width: 300px;
+    height: auto;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Styling for the logo */
+#logo {
+    width: 100px; /* Set the desired width */
+    height: auto; /* This keeps the aspect ratio intact */
+  }
+  
+  /* Optional: Adjust logo size on smaller screens */
+  @media (max-width: 768px) {
+    #logo {
+      width: 80px; /* Make the logo even smaller on mobile devices */
+    }
+  }
+  
+  /* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header section styling */
+  header {
+    display: flex;
+    justify-content: center; /* Centers the logo horizontally */
+    align-items: top;
+    padding: 20px;
+    background-color: #000000; /* Adjust as per your design */
+    position: relative; /* This allows for positioning if needed */
+  }
+  
+  /* Logo styling */
+  #logo {
+    width: 100px;  /* Smaller logo width */
+    height: auto;  /* Keeps aspect ratio intact */
+  }
+  
+  /* Optional: Make logo responsive on smaller screens */
+  @media (max-width: 768px) {
+    #logo {
+      width: 80px;  /* Even smaller logo for mobile screens */
+    }
+  }
+  
