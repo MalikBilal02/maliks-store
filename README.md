@@ -11,7 +11,7 @@ Malik's Store is an e-commerce platform offering curated tech products like smar
 ## Installation:
 1. Clone the repository:
     ```bash
-    git clone https://github.com/username/malikstore.git
+    git clone https://github.com/malikbilal02/malikstore.git
     ```
 2. Open `index.html` in your browser to see the site in action.
 
